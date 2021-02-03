@@ -45,5 +45,5 @@ module adder(
     // Deal with overflow case
     assign fe = ovf ? ge : ge + carry;
     assign fm = ovf ? 23'b11111111111111111111111 : nm[22:0];
-    assign out = {in[31],fe, fm};
+    assign out = {1'b0, fe, fm};
 endmodule
